@@ -1,0 +1,186 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  
+
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url("./bull9.jpg") no-repeat center center; 
+                background-size: cover;  
+                
+
+}
+header {
+  /* background: rgba(139, 69, 19, 0.9); */
+  color: white;
+  padding: 15px;
+  text-align: center;
+ 
+}
+
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+  /* background: rgba(255, 248, 231, 0.85); */
+  margin: 20px;
+  border-radius: 10px;
+  animation: fadeIn 2s ease;
+  color: white;
+  line-height: 1;
+
+}
+
+#main {
+  padding: 20px;
+  text-align: center;
+  /* background: rgba(255, 248, 231, 0.85); */
+  margin: 20px;
+  border-radius: 10px;
+  animation: fadeIn 2s ease;
+  color: white;
+  line-height: 2.3;
+}
+
+.hero h2 {
+  color: yellow;
+  font-size: 2rem;
+
+  
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+
+
+footer {
+  /* background: rgba(139, 69, 19, 0.9); */
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+button {
+  background: #8b4513;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #a0522d;
+}
+header h1 {
+  animation: slideDown 1.5s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+nav a {
+  display: inline-block;
+  animation: fadeNav 1s ease forwards;
+  opacity: 0;
+}
+
+nav a:nth-child(1) { animation-delay: 0.3s; }
+nav a:nth-child(2) { animation-delay: 0.6s; }
+nav a:nth-child(3) { animation-delay: 0.9s; }
+nav a:nth-child(4) { animation-delay: 1.2s; }
+
+@keyframes fadeNav {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.gallery img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1) rotate(2deg);
+  animation: bounce 0.5s;
+}
+
+
+
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1.1) rotate(2deg) translateY(0); }
+  50% { transform: scale(1.15) rotate(2deg) translateY(-8px); }
+}
+footer {
+  /* background: rgba(139, 69, 19, 0.9); */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  animation: fadeUp 2s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/*responsive*/
+@media(max-width:425px)
+{
+  header nav{
+     padding: 0;
+     font-size: small;
+  }
+   .gallery img{
+    width: 100%;
+  }
+}
+
+
+@media(max-width:403px)
+{
+  .hero h2{
+    font-size:1.5rem ;
+  }
+}
